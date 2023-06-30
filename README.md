@@ -1,7 +1,6 @@
 # Описание
 Серверная часть Мессенджера на основе фреймворка Spring. 
 Приложение содержит REST API для обработки сообщений в режиме Real-time через протокол WebSocket, а так же сохранение медиа-файлов на сервер Google Cloud Storage.
----
 # Зависимости
 - JDK 16
 - PostgreSQL
@@ -9,7 +8,6 @@
 - ModelMapper
 - Google Cloud Storage
 - Spring starter (Boot, Jpa, Web, Security, WebSocket)
----
 # Функционал
 - Авторизация и аутентификация с помощью JWT
 - Обработка данных пользователей, сообщений и чатов через REST API
