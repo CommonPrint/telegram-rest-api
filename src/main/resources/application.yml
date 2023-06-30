@@ -1,0 +1,39 @@
+server:
+  port: 6800
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/messenger-server?useSSL=false
+    username: postgres
+    password: Shrek111
+  servlet:
+    multipart:
+      max-file-size: 32MB
+      max-request-size: 32MB
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        #to fix the bug 'Failed to lazily initialize a collection of role could not initialize proxy – no Session'
+        enable_lazy_load_no_trans: true
+        globally_quoted_identifiers: true
+security:
+  jwt:
+    token:
+      secret-key: simpleKey
+      expire-length: 86400000
+gcp:
+  config:
+    file: gcp-account-file.json
+  project:
+    id: coherent-fold-381609
+  bucket:
+    id: market-storage-adlet
+  dir:
+    name: user-files
