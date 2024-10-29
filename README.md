@@ -4,6 +4,7 @@
 # Зависимости
 - JDK 16
 - PostgreSQL
+- Maven
 - Lombok
 - ModelMapper
 - Google Cloud Storage
